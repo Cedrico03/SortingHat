@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Sorting-Hat-Cédric</title>
 
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
@@ -15,55 +15,34 @@
     </head>
     <body>
         <div>
-            <div class="main-box center">
+            <div class="main-box">
                 <h1 class="heading box-heading">
                     Sorting Hat
                 </h1>
 
                 <br>
 
-                <h2 class="box button" id="Add-Person-Button">
-                    Add a person.
+                <!-- om erop te kunnen klikken moet je de classes in de href steken => niet gecentreerd-->
+
+                <h2 id="Add-Person-Button" class="box button" >
+                    <a href="assets/php/addPersonPage.php" >Add a person.</a>
                 </h2>
 
                 <br>
 
                 <h2 class="box button" id="Put-In-House-Button">
-                    Put people in a house!
+                    <a href="assets/php/PutInHouse.php" >Put people in a house!</a>
                 </h2>
             </div>
         </div>
 
         
 
-         <!-- ADD A PERSON -->
-        <div id="Add-Person" class="invisible">
-            <div class="main-box center">
-                <h2 class="heading center-text">
-                    Create account.
-                </h2>
-
-                <!-- FIRSTNAME -->
-                <div class="firstname-field spacing">
-                    <div>
-                        <label for="firstname">
-                            First Name
-                        </label>
-                    </div>
-                    <div>
-                        <input type="text" id="firstname" class="padding-right">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
 
 
 
     </body>
 
-    <script src="assets/js/script.js">
-    </script>
+    <!-- <script src="assets/js/script.js">
+    </script> -->
 </html>

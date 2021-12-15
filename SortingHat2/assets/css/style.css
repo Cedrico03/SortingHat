@@ -45,20 +45,28 @@ body {
 }
 
 .center {
+    display: flex; /*dit wegdoen*/
     margin: auto;
     width: 60%;
     padding: 1px;
 }
 
 .center-text {
-    margin: auto 0;
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .button:hover {
     background-color:mediumaquamarine;
     /*opacity: 0.85;*/
 }
+
+/* werkt niet
+a:visited {
+    text-decoration: black;
+}
+¨*/
 
 .invisible {
     display: none;
@@ -82,3 +90,10 @@ body {
 /* .flex {
     display: flex;
 } */
+
+a {
+    color: black;
+    text-decoration: none;
+    
+}
+
