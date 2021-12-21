@@ -35,12 +35,11 @@
     // connection maken
     $conn = makeConnectionWithDatabase();
 
-    $procedureAddUser = "CALL AddUser ('$firstname', '$name', '$gender', '$description', 0, 0, 0, 0);
-    ";
+    $procedureAddUser = "CALL AddUser ('$firstname', '$name', '$gender', '$description', 0, 0, 0, 0);";
     insertQuery($conn, $procedureAddUser);
 
     //((werkt niet)) => insertQuery($conn, "INSERT INTO students (firstname, name, gender, description, ravenclaw, slytherin, gryffindor, hufflepuff) VALUES ('$firstname', '$name', '$gender', '$description', '$ravenclaw', '$slytherin', '$gryffindor', '$hufflepuff'");
-
+    //werkte niet wrsch omdat haakje vergeten was
 
 
     header("Location: http://localhost"); // redirect

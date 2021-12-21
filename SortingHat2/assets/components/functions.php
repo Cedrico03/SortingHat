@@ -1,16 +1,16 @@
 <?php
 
-    function createSong($artist, $song) {
-        $listItem = "<li>" . $artist . " - " . $song . "</li>";
+    // function createSong($artist, $song) {
+    //     $listItem = "<li>" . $artist . " - " . $song . "</li>";
 
-        return $listItem; //geeft de waarde terug waar het wordt opgeroepen
-    }
+    //     return $listItem; //geeft de waarde terug waar het wordt opgeroepen
+    // }
 
     function makeConnectionWithDatabase() {
         $hostname = "localhost"; // locatie van de sql server
         $dbUser = "cedric"; // username om in te loggen
         $dbPassword = "cedric"; // password om in te loggen
-        $dbName = "database-sortinghat";
+        $dbName = "database-sortinghat2";
         $port = 3306; // 3306 - default
 
         $conn = mysqli_connect($hostname, $dbUser, $dbPassword, $dbName, $port);
@@ -35,5 +35,17 @@
 
     function closeConnection($conn) {
         $conn->close();
-    }                
+    }
+
+    function voorAlle($ding) {
+        $uitkomst = "";
+        foreach($ding as $ding2) {
+            foreach ($ding2 as $ding3) {
+                $uitkomst = $ding3;
+            }
+        }
+        return $uitkomst;
+    }
+
+    
 ?>

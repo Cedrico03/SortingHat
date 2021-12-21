@@ -29,10 +29,17 @@
                 </h2>
 
                 <br>
+                
+                <form action="assets/php/PutInHouse.php" method="POST" class="flex">
+                    <button type="submit" class="box button" name="meegegevenId" value="1">
+                        <h2>Put people in a house!</h2>
+                    </form>
+                </form>
 
-                <h2 class="box button" id="Put-In-House-Button">
+                <!-- <h2 class="box button" id="Put-In-House-Button">
                     <a href="assets/php/PutInHouse.php" >Put people in a house!</a>
-                </h2>
+                </h2> -->
+
             </div>
         </div>
 
