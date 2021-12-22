@@ -51,13 +51,13 @@
         if($meegegevenId2 > $aant) {
             ?>
             <div class="main-box">
-                <h2>
+                <h2 class="gegevens-box">
                     You rated the last student, thank you for using the website.
                 </h2>
 
-                <form action="../../index.php" class="button-Next">
+                <form action="../../index.php" class="button-Next center">
                     <button type="submit" class="box button">
-                        Go back to HomePage ->
+                        <h3>Go back to HomePage -></h3>
                     </button>
                 </form>
             </div>
@@ -71,70 +71,77 @@
                 Put students in a house...
             </h1>
             <br>
-            <h2>
-                Student:
-            </h2>
-            <ul>
-                <?php
-                    foreach($deStudent as $m) {
-                    $voornaam = $m["firstname"];
-                    $naam = $m["name"];
-                    $geslacht = $m["gender"];
-                    $beschrijving = $m["description"];
+            <img src="../img/house.png" alt="foto van sortinghat" id="houseImg" class="center">
 
-                ?>
-                <li>
+            <div class="gegevens-box">
+                <h2 class="underline">
+                    Student:
+                </h2>
+                    <?php
+                        foreach($deStudent as $m) {
+                        $voornaam = $m["firstname"];
+                        $naam = $m["name"];
+                        $geslacht = $m["gender"];
+                        $beschrijving = $m["description"];
+                        }
+                    ?>
+                <h3>
                     <?php
                         echo "Firstname: " . $voornaam;
                     ?>
-                </li>
-                <li>
+                </h3>
+                <br>
+                <h3>
                     <?php
                         echo "Lastname: " . $naam;
                     ?>
-                </li>
-                <li>
+                </h3>
+                <br>
+                <h3>
                     <?php
                         echo "Gender: " . $geslacht;
                     ?>
-                </li>
-                <li>
+                </h3>
+                <br>
+                <h3>
                     <?php
                         echo "Description: " . $beschrijving; 
                     ?>
-                </li>
-                <?php
-                    }
-                ?>
-            </ul>
-
+                </h3>
+                
+                <br>
+                
+                
+            </div>
         
             <br>
-            <img src="../img/sortinghat2.png" alt="foto van sortinghat" height="257px" width="250px" class="center">
-            
-            <form action="houses/raven.php" method="POST" class="button-Next">
-                <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
-                    Ravenclaw
-                </button>
-            </form>
-            
-            <form action="houses/slyth.php" method="POST" class="button-Next">
-                <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
-                    Slytherin
-                </button>
-            </form>
+            <div class="spaceInbetween">
+                <form action="houses/raven.php" method="POST" class="button-Next">
+                    <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
+                        Ravenclaw
+                    </button>
+                </form>
+                
+                <form action="houses/slyth.php" method="POST" class="button-Next">
+                    <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
+                        Slytherin
+                    </button>
+                </form>
+            </div>
 
-            <form action="houses/gryff.php" method="POST" class="button-Next">
-                <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
-                    Gryffindor
-                </button>
-            </form>
-            
-            <form action="houses/huff.php" method="POST" class="button-Next">
-                <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
-                    Hufflepuff
-                </button>
-            </form>
+            <div class="spaceInbetween">
+                <form action="houses/gryff.php" method="POST" class="button-Next">
+                    <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
+                        Gryffindor
+                    </button>
+                </form>
+                
+                <form action="houses/huff.php" method="POST" class="button-Next">
+                    <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
+                        Hufflepuff
+                    </button>
+                </form>
+            </div>
 
         </div>
 

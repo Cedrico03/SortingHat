@@ -7,10 +7,10 @@
     // }
 
     function makeConnectionWithDatabase() {
-        $hostname = "localhost"; // locatie van de sql server
-        $dbUser = "cedric"; // username om in te loggen
-        $dbPassword = "cedric"; // password om in te loggen
-        $dbName = "database-sortinghat2";
+        $hostname = "ID362560_sortingHat.db.webhosting.be"; // locatie van de sql server
+        $dbUser = "ID362560_sortingHat"; // username om in te loggen
+        $dbPassword = "TakeHomeAss2021"; // password om in te loggen
+        $dbName = "ID362560_sortingHat";
         $port = 3306; // 3306 - default
 
         $conn = mysqli_connect($hostname, $dbUser, $dbPassword, $dbName, $port);

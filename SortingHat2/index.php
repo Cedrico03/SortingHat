@@ -21,11 +21,14 @@
                 </h1>
 
                 <br>
+                <br>
+                <br>
+
 
                 <!-- om erop te kunnen klikken moet je de classes in de href steken => niet gecentreerd-->
 
-                <h2 id="Add-Person-Button" class="box button" >
-                    <a href="assets/php/addPersonPage.php" >Add a person.</a>
+                <h2 class="center">
+                    <a href="assets/php/addPersonPage.php"  id="Add-Person-Button" class="box button" >Add a person.</a>
                 </h2>
 
                 <br>

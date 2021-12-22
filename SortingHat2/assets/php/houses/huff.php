@@ -32,84 +32,82 @@
         ?>
         <br>
         <div class="main-box">
-            <h2>
-                Student:
-            </h2>
-            <ul>
+        <div class="gegevens-box">
+                <h2 class="underline">
+                    Student:
+                </h2>
                 <?php
                     foreach($deStudent as $m) {
                     $voornaam = $m["firstname"];
                     $naam = $m["name"];
                     $geslacht = $m["gender"];
                     $beschrijving = $m["description"];
-
+                    }
                 ?>
-                <li>
+                <h3>
                     <?php
                         echo "Firstname: " . $voornaam;
                     ?>
-                </li>
-                <li>
+                </h3>
+                <br>
+                <h3>
                     <?php
                         echo "Lastname: " . $naam;
                     ?>
-                </li>
-                <li>
+                </h3>
+                <br>
+                <h3>
                     <?php
                         echo "Gender: " . $geslacht;
                     ?>
-                </li>
-                <li>
+                </h3>
+                <br>
+                <h3>
                     <?php
                         echo "Description: " . $beschrijving; 
                     ?>
-                </li>
-                <?php
-                    }
-                ?>
-            </ul>
+                </h3>
+                
+                <br>
+            
+            </div>
 
-            <h2>
-                Ratings:
-            </h2>
-            <ul>
-                <?php
-                    foreach($selectQ as $y) {
-                    $raven = $y["@ravenclawos"];
-                    $slyth = $y["@slytherinos"];
-                    $gryff = $y["@gryffindoros"];
-                    $huff = $y["@hufflepuffos"];
-
-                ?>
-                <li>
+            <?php
+                foreach($selectQ as $y) {
+                $raven = $y["@ravenclawos"];
+                $slyth = $y["@slytherinos"];
+                $gryff = $y["@gryffindoros"];
+                $huff = $y["@hufflepuffos"];
+                }
+            ?>
+            <div class="gegevens-box-huff">
+                <h2 class="underline">
+                    Ratings:
+                </h2>
+                <h3>
                     <?php
                         echo "Ravenclaw: " . $raven . " %";
                     ?>
-                </li>
-                <li>
+                    <br>
                     <?php
                         echo "Slytherin: " . $slyth . " %";
                     ?>
-                </li>
-                <li>
+                    <br>
                     <?php
                         echo "Gryffindor: " . $gryff . " %";
                     ?>
-                </li>
-                <li>
+                    <br>
                     <?php
-                        echo "Hufflepuff: " . $huff . " %"; 
+                        echo "Hufflepuff    : " . $huff . " %"; 
                     ?>
-                </li>
-                <?php
-                    }
-                ?>
-            </ul>
+                </h3>
+            </div>
+
             <?php
                 $meegegevenId2++;
             ?>
 
-            <form action="../PutInHouse.php" method="POST" class="button-Next">
+            <form action="../PutInHouse.php" method="POST" class="button-Next center">
                 <button type="submit" class="box button" name="meegegevenId" value=<?php echo $meegegevenId2 ?>>
                     Next Person
                 </button>
